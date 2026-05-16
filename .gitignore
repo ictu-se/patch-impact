@@ -1,0 +1,33 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Generated experiment artifacts
+results/
+figures/
+*.log
+*_outputs.jsonl
+*_outputs_metrics.csv
+*_outputs_rubric.csv
+change_impact_summary_by_condition.csv
+change_impact_summary_by_source.csv
+change_impact_best_per_model.csv
+change_impact_paired_deltas.csv
+
+# Local benchmark exports and generated task files
+data/change_impact_tasks.jsonl
+data/change_impact_sample.csv
+data/raw/
+
+# Manuscript files are intentionally excluded from this code artifact.
+paper/
+manuscript/
+*.tex
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.out
