@@ -6,7 +6,14 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from .config import CONDITIONS, DEFAULT_RESULTS, DEFAULT_TASKS, MODELS, count_jsonl_rows, safe_model_name
+from .config import (
+    CONDITIONS,
+    DEFAULT_RESULTS,
+    DEFAULT_TASKS,
+    MODELS,
+    count_jsonl_rows,
+    safe_model_name,
+)
 
 
 def run_logged(cmd: list[str], log_path: Path) -> None:
@@ -16,7 +23,9 @@ def run_logged(cmd: list[str], log_path: Path) -> None:
         subprocess.run(cmd, stdout=log, stderr=log, check=True)
 
 
-def run_job(model: str, condition: str, args: argparse.Namespace, expected_rows: int) -> tuple[str, str]:
+def run_job(
+    model: str, condition: str, args: argparse.Namespace, expected_rows: int
+) -> tuple[str, str]:
     results_dir = args.results_dir
     safe = safe_model_name(model)
     out = results_dir / f"{safe}_{condition}_outputs.jsonl"
@@ -48,8 +57,34 @@ def run_job(model: str, condition: str, args: argparse.Namespace, expected_rows:
             cmd.extend(["--limit", str(args.limit)])
         run_logged(cmd, log_path)
 
-    run_logged([sys.executable, "-m", "change_impact.cli", "score", str(out), "--tasks", str(args.tasks), "--out", str(metrics)], log_path)
-    run_logged([sys.executable, "-m", "change_impact.cli", "rubric", str(out), "--tasks", str(args.tasks), "--out", str(rubric)], log_path)
+    run_logged(
+        [
+            sys.executable,
+            "-m",
+            "change_impact.cli",
+            "score",
+            str(out),
+            "--tasks",
+            str(args.tasks),
+            "--out",
+            str(metrics),
+        ],
+        log_path,
+    )
+    run_logged(
+        [
+            sys.executable,
+            "-m",
+            "change_impact.cli",
+            "rubric",
+            str(out),
+            "--tasks",
+            str(args.tasks),
+            "--out",
+            str(rubric),
+        ],
+        log_path,
+    )
     return model, condition
 
 
@@ -68,7 +103,10 @@ def run_matrix(args: argparse.Namespace) -> None:
     expected_rows = args.limit or count_jsonl_rows(args.tasks)
     jobs = [(model, condition) for model in args.models for condition in args.conditions]
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
-        futures = [executor.submit(run_job, model, condition, args, expected_rows) for model, condition in jobs]
+        futures = [
+            executor.submit(run_job, model, condition, args, expected_rows)
+            for model, condition in jobs
+        ]
         for future in as_completed(futures):
             model, condition = future.result()
             print(f"done {model} {condition}", flush=True)

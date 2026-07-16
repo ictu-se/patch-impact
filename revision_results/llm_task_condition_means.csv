@@ -1,0 +1,301 @@
+task_id,repo,source,language,condition,models,parse_ok,file_r5,file_ceiling_normalized,file_p5,test_r5,test_p5
+apache__dubbo-13869,apache/dubbo,SWE-PolyBench,Java,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+apache__dubbo-13869,apache/dubbo,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.95,0.95,0.8,0.95,1.0
+apache__dubbo-13869,apache/dubbo,SWE-PolyBench,Java,patch_only,10,1.0,0.95,0.95,0.85,0.95,1.0
+apache__dubbo-4026,apache/dubbo,SWE-PolyBench,Java,issue_only,10,1.0,0.1,0.1,0.05,0.05,0.05
+apache__dubbo-4026,apache/dubbo,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.9,0.9,0.4,0.5,0.8
+apache__dubbo-4026,apache/dubbo,SWE-PolyBench,Java,patch_only,10,1.0,0.8,0.8,0.4166666666666667,0.55,0.9
+apache__dubbo-8032,apache/dubbo,SWE-PolyBench,Java,issue_only,10,1.0,0.06666666666666667,0.06666666666666667,0.1,0.0,0.0
+apache__dubbo-8032,apache/dubbo,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.9666666666666666,0.9666666666666666,0.9349999999999999,1.0,1.0
+apache__dubbo-8032,apache/dubbo,SWE-PolyBench,Java,patch_only,10,1.0,0.8333333333333333,0.8333333333333333,0.8166666666666667,0.9,0.9
+apache__rocketmq-4763,apache/rocketmq,SWE-PolyBench,Java,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+apache__rocketmq-4763,apache/rocketmq,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.9666666666666668,0.9666666666666668,0.975,1.0,1.0
+apache__rocketmq-4763,apache/rocketmq,SWE-PolyBench,Java,patch_only,10,1.0,0.9333333333333332,0.9333333333333332,0.925,0.9,0.9
+apache__rocketmq-5062,apache/rocketmq,SWE-PolyBench,Java,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+apache__rocketmq-5062,apache/rocketmq,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.775,0.775,0.9800000000000001,0.38,1.0
+apache__rocketmq-5062,apache/rocketmq,SWE-PolyBench,Java,patch_only,10,1.0,0.675,0.675,0.9800000000000001,0.33999999999999997,0.9
+apache__rocketmq-7964,apache/rocketmq,SWE-PolyBench,Java,issue_only,10,0.9,0.0,0.0,0.0,0.0,0.0
+apache__rocketmq-7964,apache/rocketmq,SWE-PolyBench,Java,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.8,0.8
+apache__rocketmq-7964,apache/rocketmq,SWE-PolyBench,Java,patch_only,10,1.0,1.0,1.0,0.6,0.9,0.9
+apolloconfig__apollo-4199,apolloconfig/apollo,SWE-PolyBench,Java,issue_only,10,0.9,0.0,0.0,0.0,0.0,0.0
+apolloconfig__apollo-4199,apolloconfig/apollo,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.575,0.575,0.7766666666666666,0.75,1.0
+apolloconfig__apollo-4199,apolloconfig/apollo,SWE-PolyBench,Java,patch_only,10,1.0,0.575,0.575,0.7766666666666666,0.7,0.9
+astropy__astropy-14182,astropy/astropy,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.03333333333333333,0.0,0.0
+astropy__astropy-14182,astropy/astropy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.65,0.6,0.6
+astropy__astropy-14182,astropy/astropy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.5,0.6,0.6
+django__django-11910,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-11910,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.8,0.8,0.5,0.9,0.9
+django__django-11910,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-11999,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-11999,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.65,1.0,1.0
+django__django-11999,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.7,1.0,1.0
+django__django-12286,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.1,0.1,0.1
+django__django-12286,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.6,0.8,0.8
+django__django-12286,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.65,0.9,0.9
+django__django-12856,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.1,0.1,0.1
+django__django-12856,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.6,1.0,1.0
+django__django-12856,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.55,1.0,1.0
+django__django-13220,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.6,0.6,0.55,0.0,0.0
+django__django-13220,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-13220,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-13315,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.2,0.2,0.05833333333333333,0.0,0.0
+django__django-13315,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.3666666666666667,0.55,0.8
+django__django-13315,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.4333333333333333,0.55,0.8
+django__django-13447,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-13447,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-13447,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.7,1.0,1.0
+django__django-13448,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.4,0.4,0.12333333333333332,0.0,0.0
+django__django-13448,django/django,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.8,0.8,0.3633333333333334,0.24,0.9
+django__django-13448,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.34666666666666673,0.26,0.86
+django__django-13590,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.6,0.6,0.5,0.0,0.0
+django__django-13590,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.9,0.9
+django__django-13590,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.65,1.0,1.0
+django__django-13660,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.6,0.6,0.3866666666666667,0.0,0.0
+django__django-13660,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.75,0.9,0.9
+django__django-13660,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-13768,django/django,SWE-bench Lite,Python,issue_only,10,0.9,0.0,0.0,0.0,0.0,0.0
+django__django-13768,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.7,0.9,0.9
+django__django-13768,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-14787,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.1,0.0,0.0
+django__django-14787,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.65,1.0,1.0
+django__django-14787,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.7,0.9,0.9
+django__django-14855,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.7,0.7,0.6,0.0,0.0
+django__django-14855,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.55,0.75,1.0
+django__django-14855,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.4,0.6,0.9
+django__django-14997,django/django,SWE-bench Lite,Python,issue_only,10,0.9,0.0,0.0,0.0,0.0,0.0
+django__django-14997,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.8,0.8,0.4166666666666667,0.9,1.0
+django__django-14997,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.5333333333333333,0.8,0.9
+django__django-15252,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.5,0.5,0.13666666666666666,0.0,0.0
+django__django-15252,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.40333333333333343,0.8,0.9
+django__django-15252,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.4083333333333334,0.9,0.9666666666666666
+django__django-15388,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-15388,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.65,0.9,0.9
+django__django-15388,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.85,1.0,1.0
+django__django-15695,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.9,0.85
+django__django-15695,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.65,1.0,1.0
+django__django-15695,django/django,SWE-bench Lite,Python,patch_only,10,1.0,0.8,0.8,0.65,1.0,1.0
+django__django-15781,django/django,SWE-bench Lite,Python,issue_only,10,0.9,0.0,0.0,0.0,0.0,0.0
+django__django-15781,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.6,0.9,0.9
+django__django-15781,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.65,1.0,1.0
+django__django-15814,django/django,SWE-bench Lite,Python,issue_only,10,0.9,0.2,0.2,0.13333333333333333,0.0,0.0
+django__django-15814,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.8,0.8,0.55,0.9,0.9
+django__django-15814,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,1.0,1.0
+django__django-15996,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-15996,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.75,1.0,1.0
+django__django-15996,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,1.0,1.0
+django__django-16046,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.4,0.4,0.35,0.3,0.25
+django__django-16046,django/django,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.8,0.9,0.9
+django__django-16046,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,1.0,1.0
+django__django-16379,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.8,0.8,0.65,0.0,0.0
+django__django-16379,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.8,1.0,1.0
+django__django-16379,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+django__django-16408,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.5,0.5
+django__django-16408,django/django,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.8,0.8,0.6,0.9,0.9
+django__django-16408,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+django__django-16820,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-16820,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.65,0.4,0.8
+django__django-16820,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,0.5,1.0
+django__django-17087,django/django,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+django__django-17087,django/django,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.55,1.0,1.0
+django__django-17087,django/django,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,1.0,1.0
+google__gson-1832,google/gson,SWE-PolyBench,Java,issue_only,10,0.9,0.15,0.15,0.25833333333333336,0.2,0.15
+google__gson-1832,google/gson,SWE-PolyBench,Java,issue_plus_patch,10,0.9,0.2,0.2,0.425,0.8,0.675
+google__gson-1832,google/gson,SWE-PolyBench,Java,patch_only,10,1.0,0.25,0.25,0.67,0.8,0.67
+google__gson-2130,google/gson,SWE-PolyBench,Java,issue_only,10,1.0,0.3,0.3,0.25,0.2,0.2
+google__gson-2130,google/gson,SWE-PolyBench,Java,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.8,0.8
+google__gson-2130,google/gson,SWE-PolyBench,Java,patch_only,10,1.0,1.0,1.0,0.8,0.9,0.9
+google__gson-2134,google/gson,SWE-PolyBench,Java,issue_only,10,1.0,0.1,0.1,0.05,0.0,0.0
+google__gson-2134,google/gson,SWE-PolyBench,Java,issue_plus_patch,10,1.0,1.0,1.0,0.8,0.8,0.8
+google__gson-2134,google/gson,SWE-PolyBench,Java,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+google__gson-2364,google/gson,SWE-PolyBench,Java,issue_only,10,1.0,0.8,0.8,0.65,0.4,0.4
+google__gson-2364,google/gson,SWE-PolyBench,Java,issue_plus_patch,10,1.0,1.0,1.0,0.75,0.9,0.9
+google__gson-2364,google/gson,SWE-PolyBench,Java,patch_only,10,1.0,1.0,1.0,0.6,0.9,0.9
+huggingface__transformers-15831,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.4,0.4,0.95,0.0,0.0
+huggingface__transformers-15831,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.475,0.475,0.7666666666666666,0.85,0.9
+huggingface__transformers-15831,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,0.45,0.45,0.6,0.7,0.7
+huggingface__transformers-17082,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.06666666666666667,0.06666666666666667,0.15,0.0,0.0
+huggingface__transformers-17082,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.8666666666666666,0.8666666666666666,0.925,0.8,0.8
+huggingface__transformers-17082,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,0.9,0.9,0.9416666666666668,0.9,0.85
+huggingface__transformers-19219,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+huggingface__transformers-19219,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.9,0.85
+huggingface__transformers-19219,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.7,0.9,0.9
+huggingface__transformers-21345,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.5,0.5,0.27,0.0,0.0
+huggingface__transformers-21345,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.8,1.0,1.0
+huggingface__transformers-21345,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,0.9,0.9,0.9,0.75,0.9,0.9
+huggingface__transformers-27717,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.2333333333333333,0.2333333333333333,0.4033333333333333,0.0,0.0
+huggingface__transformers-27717,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.5666666666666667,0.5666666666666667,0.8166666666666668,1.0,1.0
+huggingface__transformers-27717,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,0.5,0.5,0.7333333333333334,0.9,0.9
+huggingface__transformers-28517,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,1.0,1.0,0.8,0.0,0.0
+huggingface__transformers-28517,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.8,0.9,0.9
+huggingface__transformers-28517,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.7,0.9,0.9
+huggingface__transformers-29680,huggingface/transformers,SWE-PolyBench,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+huggingface__transformers-29680,huggingface/transformers,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.9,0.9,0.65,0.4,0.8
+huggingface__transformers-29680,huggingface/transformers,SWE-PolyBench,Python,patch_only,10,1.0,0.9,0.9,0.65,0.45,0.82
+keras-team__keras-19775,keras-team/keras,SWE-PolyBench,Python,issue_only,10,1.0,0.8,0.8,0.75,0.0,0.0
+keras-team__keras-19775,keras-team/keras,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,1.0,1.0
+keras-team__keras-19775,keras-team/keras,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.65,0.8,0.75
+keras-team__keras-19844,keras-team/keras,SWE-PolyBench,Python,issue_only,10,1.0,0.4,0.4,0.3533333333333334,0.0,0.0
+keras-team__keras-19844,keras-team/keras,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.85,0.8,0.8
+keras-team__keras-19844,keras-team/keras,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.85,1.0,1.0
+keras-team__keras-19937,keras-team/keras,SWE-PolyBench,Python,issue_only,10,1.0,0.03333333333333333,0.03333333333333333,0.02,0.0,0.0
+keras-team__keras-19937,keras-team/keras,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.5333333333333333,0.5333333333333333,0.6666666666666666,0.85,0.9
+keras-team__keras-19937,keras-team/keras,SWE-PolyBench,Python,patch_only,10,1.0,0.5333333333333333,0.5333333333333333,0.6333333333333333,0.85,0.9
+keras-team__keras-20002,keras-team/keras,SWE-PolyBench,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+keras-team__keras-20002,keras-team/keras,SWE-PolyBench,Python,issue_plus_patch,10,1.0,0.95,0.95,0.85,0.7,0.7
+keras-team__keras-20002,keras-team/keras,SWE-PolyBench,Python,patch_only,10,1.0,0.95,0.95,0.9333333333333333,1.0,0.9
+langchain-ai__langchain-4103,langchain-ai/langchain,SWE-PolyBench,Python,issue_only,10,1.0,0.9,0.9,0.8,0.04,0.2
+langchain-ai__langchain-4103,langchain-ai/langchain,SWE-PolyBench,Python,issue_plus_patch,10,0.9,0.9,0.9,0.55,0.21999999999999997,0.9
+langchain-ai__langchain-4103,langchain-ai/langchain,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.6333333333333333,0.18,0.9
+langchain-ai__langchain-5450,langchain-ai/langchain,SWE-PolyBench,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+langchain-ai__langchain-5450,langchain-ai/langchain,SWE-PolyBench,Python,issue_plus_patch,10,1.0,1.0,1.0,0.75,0.9,0.9
+langchain-ai__langchain-5450,langchain-ai/langchain,SWE-PolyBench,Python,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+matplotlib__matplotlib-23563,matplotlib/matplotlib,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.05,0.0,0.0
+matplotlib__matplotlib-23563,matplotlib/matplotlib,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.8,0.8
+matplotlib__matplotlib-23563,matplotlib/matplotlib,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,0.8,0.8
+matplotlib__matplotlib-25332,matplotlib/matplotlib,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.3,0.2
+matplotlib__matplotlib-25332,matplotlib/matplotlib,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.6,1.0,1.0
+matplotlib__matplotlib-25332,matplotlib/matplotlib,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.65,1.0,1.0
+matplotlib__matplotlib-26020,matplotlib/matplotlib,SWE-bench Lite,Python,issue_only,10,1.0,0.6,0.6,0.22833333333333333,0.0,0.0
+matplotlib__matplotlib-26020,matplotlib/matplotlib,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.55,0.9,0.9
+matplotlib__matplotlib-26020,matplotlib/matplotlib,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,1.0,1.0
+mui__material-ui-13743,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.1,0.1,0.1,0.0,0.0
+mui__material-ui-13743,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,1.0,1.0,0.65,0.8,0.8
+mui__material-ui-13743,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.9,0.9,0.65,0.9,0.9
+mui__material-ui-14023,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.02857142857142857,0.039999999999999994,0.1,0.0,0.0
+mui__material-ui-14023,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.37142857142857133,0.5199999999999999,0.745,0.9,0.725
+mui__material-ui-14023,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.4285714285714285,0.5999999999999999,0.8216666666666667,0.9,0.745
+mui__material-ui-15430,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.08571428571428572,0.24,0.3483333333333333,0.0,0.0
+mui__material-ui-15430,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.29285714285714287,0.82,0.9,0.7,0.85
+mui__material-ui-15430,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.3,0.8400000000000001,1.0,0.75,0.9
+mui__material-ui-16137,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.01875,0.06000000000000001,0.15,0.0,0.0
+mui__material-ui-16137,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.25625,0.82,0.8800000000000001,0.9,0.82
+mui__material-ui-16137,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.20625,0.6599999999999999,0.8550000000000001,0.8,0.8
+mui__material-ui-17005,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.2,0.2,0.1,0.0,0.0
+mui__material-ui-17005,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.9,0.9,0.5,0.8,0.8
+mui__material-ui-17005,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.9,0.9,0.5,0.9,0.9
+mui__material-ui-20133,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.02222222222222222,0.039999999999999994,0.15,0.0,0.0
+mui__material-ui-20133,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.26666666666666666,0.48,0.6733333333333332,0.45,0.8
+mui__material-ui-20133,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.2111111111111111,0.38,0.65,0.35,0.65
+mui__material-ui-20247,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+mui__material-ui-20247,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.9,0.9,0.55,0.8,0.8
+mui__material-ui-20247,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.9,0.9,0.65,0.9,0.9
+mui__material-ui-26460,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.03636363636363636,0.08,0.11666666666666665,0.0,0.0
+mui__material-ui-26460,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.27272727272727276,0.5999999999999999,0.7533333333333332,0.8,0.8666666666666666
+mui__material-ui-26460,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.36363636363636365,0.8,0.9200000000000002,0.9333333333333332,1.0
+mui__material-ui-34158,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+mui__material-ui-34158,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.165,0.66,0.6933333333333334,0.31999999999999995,0.8166666666666668
+mui__material-ui-34158,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.18000000000000002,0.7200000000000001,0.77,0.31999999999999995,0.7666666666666666
+mui__material-ui-36426,mui/material-ui,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.01111111111111111,0.019999999999999997,0.02,0.0,0.0
+mui__material-ui-36426,mui/material-ui,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,0.32222222222222224,0.58,0.7316666666666667,0.9,0.9
+mui__material-ui-36426,mui/material-ui,SWE-PolyBench,TypeScript,patch_only,10,1.0,0.34444444444444444,0.6199999999999999,0.7566666666666666,0.9,0.85
+prettier__prettier-10065,prettier/prettier,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+prettier__prettier-10065,prettier/prettier,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.5666666666666667,0.5666666666666667,0.5566666666666666,0.2333333333333333,0.65
+prettier__prettier-10065,prettier/prettier,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.5,0.5,0.6266666666666667,0.26666666666666666,0.7150000000000001
+prettier__prettier-14317,prettier/prettier,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+prettier__prettier-14317,prettier/prettier,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.675,0.675,0.8566666666666667,1.0,1.0
+prettier__prettier-14317,prettier/prettier,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.725,0.725,0.9400000000000001,1.0,1.0
+prettier__prettier-3775,prettier/prettier,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0125,0.02,0.02,0.0,0.0
+prettier__prettier-3775,prettier/prettier,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.225,0.36,0.9,0.2428571428571428,1.0
+prettier__prettier-3775,prettier/prettier,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.2,0.31999999999999995,0.7333333333333333,0.2428571428571428,0.9
+prettier__prettier-418,prettier/prettier,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+prettier__prettier-418,prettier/prettier,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,1.0,1.0,0.8083333333333332,0.6666666666666666,1.0
+prettier__prettier-418,prettier/prettier,SWE-PolyBench,JavaScript,patch_only,10,1.0,1.0,1.0,0.6,0.6666666666666667,1.0
+prettier__prettier-842,prettier/prettier,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+prettier__prettier-842,prettier/prettier,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,1.0,1.0,0.5666666666666667,0.7333333333333333,0.9
+prettier__prettier-842,prettier/prettier,SWE-PolyBench,JavaScript,patch_only,10,1.0,1.0,1.0,0.5283333333333333,0.7,1.0
+psf__requests-1963,psf/requests,SWE-bench Lite,Python,issue_only,10,1.0,0.4,0.4,0.35,0.1,0.05
+psf__requests-1963,psf/requests,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.6,0.8,0.8
+psf__requests-1963,psf/requests,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.6,1.0,1.0
+pydata__xarray-4248,pydata/xarray,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+pydata__xarray-4248,pydata/xarray,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.65,0.8,0.8
+pydata__xarray-4248,pydata/xarray,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+pylint-dev__pylint-7080,pylint-dev/pylint,SWE-bench Lite,Python,issue_only,10,0.6,0.0,0.0,0.0,0.0,0.0
+pylint-dev__pylint-7080,pylint-dev/pylint,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.8,0.8,0.45,0.9,0.9
+pylint-dev__pylint-7080,pylint-dev/pylint,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.65,0.9,0.9
+pytest-dev__pytest-7168,pytest-dev/pytest,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+pytest-dev__pytest-7168,pytest-dev/pytest,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.5833333333333333,1.0,1.0
+pytest-dev__pytest-7168,pytest-dev/pytest,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,1.0,1.0
+pytest-dev__pytest-7220,pytest-dev/pytest,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+pytest-dev__pytest-7220,pytest-dev/pytest,SWE-bench Lite,Python,issue_plus_patch,10,1.0,0.9,0.9,0.4833333333333333,0.5,0.5
+pytest-dev__pytest-7220,pytest-dev/pytest,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.65,0.9,0.9
+pytest-dev__pytest-8906,pytest-dev/pytest,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+pytest-dev__pytest-8906,pytest-dev/pytest,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.6,1.0,1.0
+pytest-dev__pytest-8906,pytest-dev/pytest,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,1.0,1.0
+scikit-learn__scikit-learn-10508,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_only,10,1.0,0.9,0.9,0.75,0.1,0.1
+scikit-learn__scikit-learn-10508,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.9,0.9
+scikit-learn__scikit-learn-10508,scikit-learn/scikit-learn,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,0.9,0.9
+scikit-learn__scikit-learn-13584,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+scikit-learn__scikit-learn-13584,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.9,0.9
+scikit-learn__scikit-learn-13584,scikit-learn/scikit-learn,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,0.9,0.9
+scikit-learn__scikit-learn-14087,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_only,10,1.0,0.8,0.8,0.7,0.2,0.2
+scikit-learn__scikit-learn-14087,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.75,0.9,0.9
+scikit-learn__scikit-learn-14087,scikit-learn/scikit-learn,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,0.8,0.8
+scikit-learn__scikit-learn-15512,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_only,10,0.8,0.4,0.4,0.4,0.2,0.2
+scikit-learn__scikit-learn-15512,scikit-learn/scikit-learn,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.6,0.6
+scikit-learn__scikit-learn-15512,scikit-learn/scikit-learn,SWE-bench Lite,Python,patch_only,10,0.9,0.9,0.9,0.65,0.7,0.7
+serverless__serverless-3609,serverless/serverless,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+serverless__serverless-3609,serverless/serverless,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.7333333333333333,0.7333333333333333,0.85,0.8,0.8
+serverless__serverless-3609,serverless/serverless,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.8666666666666666,0.8666666666666666,0.925,1.0,0.9333333333333332
+serverless__serverless-3642,serverless/serverless,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+serverless__serverless-3642,serverless/serverless,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.85,0.85,0.7833333333333334,0.9,0.9
+serverless__serverless-3642,serverless/serverless,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.9,0.9,0.8833333333333332,1.0,1.0
+serverless__serverless-6871,serverless/serverless,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+serverless__serverless-6871,serverless/serverless,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,1.0,1.0,0.55,0.9,0.85
+serverless__serverless-6871,serverless/serverless,SWE-PolyBench,JavaScript,patch_only,10,1.0,1.0,1.0,0.6,0.9,0.9
+serverless__serverless-7024,serverless/serverless,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+serverless__serverless-7024,serverless/serverless,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.8,0.8,0.7833333333333333,1.0,0.95
+serverless__serverless-7024,serverless/serverless,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.8,0.8,0.7833333333333333,1.0,1.0
+sphinx-doc__sphinx-8721,sphinx-doc/sphinx,SWE-bench Lite,Python,issue_only,10,1.0,0.4,0.4,0.3,0.0,0.0
+sphinx-doc__sphinx-8721,sphinx-doc/sphinx,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.75,0.9,0.9
+sphinx-doc__sphinx-8721,sphinx-doc/sphinx,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.8,0.9,0.9
+sveltejs__svelte-4395,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sveltejs__svelte-4395,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,0.5,0.5,0.6166666666666665,0.75,1.0
+sveltejs__svelte-4395,sveltejs/svelte,SWE-PolyBench,JavaScript,patch_only,10,1.0,0.45,0.45,0.5166666666666667,0.7,1.0
+sveltejs__svelte-6514,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sveltejs__svelte-6514,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,1.0,1.0,0.6300000000000001,0.55,1.0
+sveltejs__svelte-6514,sveltejs/svelte,SWE-PolyBench,JavaScript,patch_only,10,1.0,1.0,1.0,0.55,0.575,0.9333333333333332
+sveltejs__svelte-814,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sveltejs__svelte-814,sveltejs/svelte,SWE-PolyBench,JavaScript,issue_plus_patch,10,1.0,1.0,1.0,0.7,0.3,0.9
+sveltejs__svelte-814,sveltejs/svelte,SWE-PolyBench,JavaScript,patch_only,10,1.0,1.0,1.0,0.675,0.3,0.9
+sympy__sympy-12454,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.9,0.9,0.65,0.3,0.3
+sympy__sympy-12454,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7333333333333333,0.9,0.9
+sympy__sympy-12454,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.85,0.9,0.9
+sympy__sympy-13647,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.05,0.0,0.0
+sympy__sympy-13647,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.8,0.8
+sympy__sympy-13647,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,1.0,0.95
+sympy__sympy-13895,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.02,0.0,0.0
+sympy__sympy-13895,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.5,0.5
+sympy__sympy-13895,sympy/sympy,SWE-bench Lite,Python,patch_only,10,0.9,0.9,0.9,0.6,0.8,0.75
+sympy__sympy-16988,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sympy__sympy-16988,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.75,0.8,0.8
+sympy__sympy-16988,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+sympy__sympy-17022,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sympy__sympy-17022,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.5333333333333333,0.55,0.7
+sympy__sympy-17022,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,0.9,0.9,0.45,0.6,0.7
+sympy__sympy-17655,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.9,0.9,0.7833333333333333,0.0,0.0
+sympy__sympy-17655,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.8,0.9,0.9
+sympy__sympy-17655,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7833333333333333,1.0,0.9
+sympy__sympy-20212,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+sympy__sympy-20212,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.8,0.9,0.9
+sympy__sympy-20212,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.75,0.9,0.9
+sympy__sympy-21055,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.0,0.0,0.0,0.1,0.1
+sympy__sympy-21055,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.7,1.0,1.0
+sympy__sympy-21055,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.7,0.9,0.9
+sympy__sympy-22840,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.1,0.1,0.1,0.1,0.2
+sympy__sympy-22840,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.5249999999999999,0.8,0.9
+sympy__sympy-22840,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.395,0.85,0.9
+sympy__sympy-24102,sympy/sympy,SWE-bench Lite,Python,issue_only,10,1.0,0.9,0.9,0.6833333333333333,0.05,0.1
+sympy__sympy-24102,sympy/sympy,SWE-bench Lite,Python,issue_plus_patch,10,1.0,1.0,1.0,0.5166666666666666,0.6,1.0
+sympy__sympy-24102,sympy/sympy,SWE-bench Lite,Python,patch_only,10,1.0,1.0,1.0,0.4833333333333333,0.65,0.95
+tailwindlabs__tailwindcss-109,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+tailwindlabs__tailwindcss-109,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,issue_plus_patch,10,1.0,1.0,1.0,0.8,0.9,0.9
+tailwindlabs__tailwindcss-109,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,patch_only,10,1.0,1.0,1.0,0.75,1.0,1.0
+tailwindlabs__tailwindcss-165,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+tailwindlabs__tailwindcss-165,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,issue_plus_patch,10,0.9,0.9,0.9,0.65,0.7,0.7
+tailwindlabs__tailwindcss-165,tailwindlabs/tailwindcss,SWE-PolyBench,TypeScript,patch_only,10,1.0,1.0,1.0,0.65,0.8,0.8
+trinodb__trino-3638,trinodb/trino,SWE-PolyBench,Java,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+trinodb__trino-3638,trinodb/trino,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.9666666666666666,0.9666666666666666,0.9666666666666666,0.9333333333333333,1.0
+trinodb__trino-3638,trinodb/trino,SWE-PolyBench,Java,patch_only,10,1.0,0.9,0.9,1.0,0.7333333333333333,0.9
+trinodb__trino-3725,trinodb/trino,SWE-PolyBench,Java,issue_only,10,1.0,0.0,0.0,0.0,0.0,0.0
+trinodb__trino-3725,trinodb/trino,SWE-PolyBench,Java,issue_plus_patch,10,1.0,0.9,0.9,0.9,0.7,0.7
+trinodb__trino-3725,trinodb/trino,SWE-PolyBench,Java,patch_only,10,1.0,1.0,1.0,1.0,0.8,0.8

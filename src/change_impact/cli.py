@@ -13,7 +13,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="change-impact")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    prepare = sub.add_parser("prepare", help="Build the 100-task JSONL from external benchmark CSVs.")
+    prepare = sub.add_parser(
+        "prepare", help="Build the 100-task JSONL from external benchmark CSVs."
+    )
     add_prepare_args(prepare)
     prepare.set_defaults(func=run_prepare)
 
@@ -29,11 +31,15 @@ def build_parser() -> argparse.ArgumentParser:
     add_score_args(score)
     score.set_defaults(func=run_score)
 
-    rubric = sub.add_parser("rubric", help="Score automatic requirement/risk rubric proxies for one output JSONL.")
+    rubric = sub.add_parser(
+        "rubric", help="Score automatic requirement/risk rubric proxies for one output JSONL."
+    )
     add_score_args(rubric)
     rubric.set_defaults(func=run_rubric)
 
-    summarize = sub.add_parser("summarize", help="Aggregate metrics and write summary CSVs/figures.")
+    summarize = sub.add_parser(
+        "summarize", help="Aggregate metrics and write summary CSVs/figures."
+    )
     add_summarize_args(summarize)
     summarize.set_defaults(func=run_summarize)
     return parser

@@ -1,0 +1,3 @@
+comparison,metric,mean,ci_low,ci_high
+issue_plus_patch - patch_only,file_delta,-0.016368614718614716,-0.031225081579158525,0.0020633436297498695
+issue_plus_patch - patch_only,test_delta,-0.030983333333333342,-0.04933080361045545,-0.01243727743062557
