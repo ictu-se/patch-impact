@@ -25,7 +25,7 @@ MODELS = [
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TASKS = PROJECT_ROOT / "data" / "change_impact_tasks.jsonl"
-DEFAULT_MANIFEST = PROJECT_ROOT / "data" / "task_manifest.csv"
+DEFAULT_MANIFEST = PROJECT_ROOT / "data" / "revision_task_manifest.csv"
 DEFAULT_PROMPT = PROJECT_ROOT / "prompts" / "change_impact_prompt.md"
 DEFAULT_RESULTS = PROJECT_ROOT / "results"
 DEFAULT_FIGURES = PROJECT_ROOT / "figures"

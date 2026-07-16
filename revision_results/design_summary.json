@@ -1,0 +1,17 @@
+{
+  "tasks": 100,
+  "repositories": 23,
+  "source_counts": {
+    "SWE-PolyBench": 50,
+    "SWE-bench Lite": 50
+  },
+  "language_counts": {
+    "Java": 13,
+    "JavaScript": 12,
+    "Python": 63,
+    "TypeScript": 12
+  },
+  "seed": 20260515,
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260716
+}

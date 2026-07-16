@@ -1,0 +1,6 @@
+metric,pairs,exact_agreement,quadratic_weighted_kappa
+functionality_correctness,120,0.7833333333333333,0.23739767341663087
+requirement_summary_correctness,120,0.7416666666666667,0.0
+risk_usefulness,120,0.25833333333333336,0.004944375772558796
+unsupported_claim_severity,120,0.7666666666666667,0.06879194630872487
+overall_triage_utility,120,0.5166666666666667,0.008782936010037656

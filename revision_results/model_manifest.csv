@@ -1,0 +1,11 @@
+model,parameters,context_length,quantization,weight_digest_prefix
+qwen2.5-coder:1.5b,1.5B,32768,Q4_K_M,29d8c98f
+qwen2.5-coder:3b,3.1B,32768,Q4_K_M,4a188102
+qwen2.5-coder:7b,7.6B,32768,Q4_K_M,60e05f21
+qwen2.5-coder:14b,14.8B,32768,Q4_K_M,ac9bc7a6
+qwen2.5:3b,3.1B,32768,Q4_K_M,5ee4f07c
+llama3.2:3b,3.2B,131072,Q4_K_M,dde5aa3f
+gemma3:4b,4.3B,131072,Q4_K_M,aeda25e6
+granite3.2-vision:latest,2.5B,16384,Q4_K_M,1aefcd9a/4d464be2
+llama3.2-vision:11b,10.7B,131072,Q4_K_M,9999d473
+qwen2.5vl:3b,3.8B,128000,Q4_K_M,e9758e58

@@ -67,7 +67,9 @@ def load_metric_rows(results_dir: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def write_summaries(results_dir: Path, rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+def write_summaries(
+    results_dir: Path, rows: list[dict[str, Any]]
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     groups = defaultdict(list)
     source_groups = defaultdict(list)
     for row in rows:
@@ -103,7 +105,10 @@ def write_summaries(results_dir: Path, rows: list[dict[str, Any]]) -> tuple[list
     for row in summary:
         by_model[row["model"]].append(row)
     best_rows = [
-        max(candidates, key=lambda row: row["quality_score"] if row["quality_score"] is not None else -math.inf)
+        max(
+            candidates,
+            key=lambda row: row["quality_score"] if row["quality_score"] is not None else -math.inf,
+        )
         for _, candidates in sorted(by_model.items())
     ]
     write_csv(results_dir / "change_impact_best_per_model.csv", best_rows, fields)
@@ -114,35 +119,67 @@ def write_summaries(results_dir: Path, rows: list[dict[str, Any]]) -> tuple[list
         for name in metric_names:
             out[name] = mean(as_float(row.get(name)) for row in group)
         source_summary.append(out)
-    write_csv(results_dir / "change_impact_summary_by_source.csv", source_summary, ["model", "condition", "source", "rows"] + metric_names)
+    write_csv(
+        results_dir / "change_impact_summary_by_source.csv",
+        source_summary,
+        ["model", "condition", "source", "rows"] + metric_names,
+    )
 
     task_index = {(row["model"], row["condition"], row["task_id"]): row for row in rows}
     deltas = []
     for model in sorted(by_model):
-        issue_rows = [row for row in rows if row["model"] == model and row["condition"] == "issue_only"]
+        issue_rows = [
+            row for row in rows if row["model"] == model and row["condition"] == "issue_only"
+        ]
         for base in issue_rows:
             paired = task_index.get((model, "issue_plus_patch", base["task_id"]))
             if not paired:
                 continue
-            deltas.append({
-                "model": model,
-                "task_id": base["task_id"],
-                "source": base["source"],
-                "affected_file_recall_5_delta": (as_float(paired["affected_file_recall_5"]) or 0.0) - (as_float(base["affected_file_recall_5"]) or 0.0),
-                "test_file_recall_5_delta": (as_float(paired["test_file_recall_5"]) or 0.0) - (as_float(base["test_file_recall_5"]) or 0.0),
-                "quality_score_delta": (as_float(paired["quality_score"]) or 0.0) - (as_float(base["quality_score"]) or 0.0),
-            })
-    write_csv(results_dir / "change_impact_paired_deltas.csv", deltas, ["model", "task_id", "source", "affected_file_recall_5_delta", "test_file_recall_5_delta", "quality_score_delta"])
+            deltas.append(
+                {
+                    "model": model,
+                    "task_id": base["task_id"],
+                    "source": base["source"],
+                    "affected_file_recall_5_delta": (
+                        as_float(paired["affected_file_recall_5"]) or 0.0
+                    )
+                    - (as_float(base["affected_file_recall_5"]) or 0.0),
+                    "test_file_recall_5_delta": (as_float(paired["test_file_recall_5"]) or 0.0)
+                    - (as_float(base["test_file_recall_5"]) or 0.0),
+                    "quality_score_delta": (as_float(paired["quality_score"]) or 0.0)
+                    - (as_float(base["quality_score"]) or 0.0),
+                }
+            )
+    write_csv(
+        results_dir / "change_impact_paired_deltas.csv",
+        deltas,
+        [
+            "model",
+            "task_id",
+            "source",
+            "affected_file_recall_5_delta",
+            "test_file_recall_5_delta",
+            "quality_score_delta",
+        ],
+    )
     return summary, best_rows, deltas
 
 
-def write_figures(figures_dir: Path, summary: list[dict[str, Any]], best_rows: list[dict[str, Any]], deltas: list[dict[str, Any]]) -> None:
+def write_figures(
+    figures_dir: Path,
+    summary: list[dict[str, Any]],
+    best_rows: list[dict[str, Any]],
+    deltas: list[dict[str, Any]],
+) -> None:
     import matplotlib.pyplot as plt
 
     figures_dir.mkdir(parents=True, exist_ok=True)
 
     best_sorted = sorted(best_rows, key=lambda row: row["quality_score"], reverse=True)
-    labels = [row["model"].replace("qwen2.5-coder", "qwen-coder").replace(":", "\n") for row in best_sorted]
+    labels = [
+        row["model"].replace("qwen2.5-coder", "qwen-coder").replace(":", "\n")
+        for row in best_sorted
+    ]
     scores = [row["quality_score"] for row in best_sorted]
     runtimes = [row["elapsed_sec"] for row in best_sorted]
     fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.0))
@@ -153,7 +190,13 @@ def write_figures(figures_dir: Path, summary: list[dict[str, Any]], best_rows: l
     axes[0].set_ylim(0, max(scores) * 1.18 if scores else 1)
     axes[1].scatter(runtimes, scores, s=70, color="#b34d4d")
     for row in best_sorted:
-        axes[1].annotate(row["model"].split(":")[0].replace("qwen2.5-coder", "qwen-coder"), (row["elapsed_sec"], row["quality_score"]), fontsize=7, xytext=(3, 3), textcoords="offset points")
+        axes[1].annotate(
+            row["model"].split(":")[0].replace("qwen2.5-coder", "qwen-coder"),
+            (row["elapsed_sec"], row["quality_score"]),
+            fontsize=7,
+            xytext=(3, 3),
+            textcoords="offset points",
+        )
     axes[1].set_xlabel("Mean runtime (s)")
     axes[1].set_ylabel("Screening score")
     axes[1].grid(True, alpha=0.25)
@@ -161,8 +204,13 @@ def write_figures(figures_dir: Path, summary: list[dict[str, Any]], best_rows: l
     fig.savefig(figures_dir / "fig_model_screening_runtime.pdf")
     plt.close(fig)
 
-    patch = sorted([row for row in summary if row["condition"] == "issue_plus_patch"], key=lambda row: row["model"])
-    labels = [row["model"].replace("qwen2.5-coder", "qwen-coder").replace(":", "\n") for row in patch]
+    patch = sorted(
+        [row for row in summary if row["condition"] == "issue_plus_patch"],
+        key=lambda row: row["model"],
+    )
+    labels = [
+        row["model"].replace("qwen2.5-coder", "qwen-coder").replace(":", "\n") for row in patch
+    ]
     file_recalls = [row["affected_file_recall_5"] for row in patch]
     test_recalls = [row["test_file_recall_5"] for row in patch]
     x = list(range(len(labels)))

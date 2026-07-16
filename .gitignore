@@ -2,12 +2,15 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+.pytest_cache/
 .venv/
 venv/
 
 # Generated experiment artifacts
 results/
 figures/
+generated_figures/
+revision_results/semantic_judgments.jsonl
 *.log
 *_outputs.jsonl
 *_outputs_metrics.csv
@@ -25,8 +28,12 @@ data/raw/
 # Manuscript files are intentionally excluded from this code artifact.
 paper/
 manuscript/
+submission/
+latex_source/
 *.tex
 *.pdf
+*.docx
+*.zip
 *.aux
 *.bbl
 *.blg

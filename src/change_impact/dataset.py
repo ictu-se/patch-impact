@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
 from pathlib import Path
@@ -90,7 +89,9 @@ def task_from_swebench(row: dict[str, str]) -> dict[str, Any] | None:
     test_files = changed_files(test_patch)
     fail_to_pass = parse_json_list(row.get("FAIL_TO_PASS", ""))
     if not test_files:
-        test_files = sorted({item.split("::", 1)[0] for item in fail_to_pass if "::" in item or "/" in item})
+        test_files = sorted(
+            {item.split("::", 1)[0] for item in fail_to_pass if "::" in item or "/" in item}
+        )
     if not files or not test_files:
         return None
     return {
@@ -123,12 +124,22 @@ def build_tasks(poly_path: Path, swe_path: Path, manifest_path: Path) -> list[di
     missing = [row["task_id"] for row in manifest if row["task_id"] not in by_id]
     if missing:
         sample = ", ".join(missing[:5])
-        raise RuntimeError(f"{len(missing)} manifest tasks were not found in benchmark CSVs: {sample}")
+        raise RuntimeError(
+            f"{len(missing)} manifest tasks were not found in benchmark CSVs: {sample}"
+        )
     return [by_id[row["task_id"]] for row in sorted(manifest, key=lambda row: int(row["order"]))]
 
 
 def write_task_summary(path: Path, tasks: list[dict[str, Any]]) -> None:
-    fields = ["task_id", "source", "repo", "language", "task_category", "affected_files", "test_files"]
+    fields = [
+        "task_id",
+        "source",
+        "repo",
+        "language",
+        "task_category",
+        "affected_files",
+        "test_files",
+    ]
     rows = [
         {
             "task_id": task["task_id"],
@@ -145,8 +156,12 @@ def write_task_summary(path: Path, tasks: list[dict[str, Any]]) -> None:
 
 
 def add_prepare_args(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--poly", required=True, type=Path, help="Path to SWE-PolyBench CSV export.")
-    parser.add_argument("--swe", required=True, type=Path, help="Path to SWE-bench Lite CSV export.")
+    parser.add_argument(
+        "--poly", required=True, type=Path, help="Path to SWE-PolyBench CSV export."
+    )
+    parser.add_argument(
+        "--swe", required=True, type=Path, help="Path to SWE-bench Lite CSV export."
+    )
     parser.add_argument("--manifest", default=DEFAULT_MANIFEST, type=Path)
     parser.add_argument("--out", default=DEFAULT_TASKS, type=Path)
     parser.add_argument("--summary", default=Path("data/change_impact_sample.csv"), type=Path)

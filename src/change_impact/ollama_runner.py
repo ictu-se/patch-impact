@@ -59,11 +59,26 @@ def run_generation(
             try:
                 result = call_ollama(model, prompt, timeout)
             except TimeoutError:
-                result = {"returncode": -1, "stdout": "", "stderr": "timeout", "elapsed_sec": timeout}
+                result = {
+                    "returncode": -1,
+                    "stdout": "",
+                    "stderr": "timeout",
+                    "elapsed_sec": timeout,
+                }
             except urllib.error.URLError as exc:
-                result = {"returncode": -2, "stdout": "", "stderr": str(exc), "elapsed_sec": timeout}
+                result = {
+                    "returncode": -2,
+                    "stdout": "",
+                    "stderr": str(exc),
+                    "elapsed_sec": timeout,
+                }
             except http.client.RemoteDisconnected as exc:
-                result = {"returncode": -3, "stdout": "", "stderr": str(exc), "elapsed_sec": timeout}
+                result = {
+                    "returncode": -3,
+                    "stdout": "",
+                    "stderr": str(exc),
+                    "elapsed_sec": timeout,
+                }
 
             record = {
                 "task_id": task["task_id"],
@@ -79,7 +94,10 @@ def run_generation(
             out.write(json.dumps(record, ensure_ascii=False) + "\n")
             out.flush()
             count += 1
-            print(f"{count}: {task['task_id']} rc={record['returncode']} elapsed={record['elapsed_sec']}", flush=True)
+            print(
+                f"{count}: {task['task_id']} rc={record['returncode']} elapsed={record['elapsed_sec']}",
+                flush=True,
+            )
             if limit and count >= limit:
                 break
     print(f"wrote {count} outputs to {out_path}")

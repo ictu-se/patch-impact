@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
 from pathlib import Path
@@ -108,9 +107,15 @@ def requirement_score(parsed: dict[str, Any] | None, task: dict[str, Any]) -> in
     tests = list_field(parsed, "regression_test_focus")
     file_hit = any_path_hit(impacted, task.get("gold_affected_files", []))
     test_hit = any_path_hit(tests, task.get("gold_test_files", []))
-    issue_overlap = len(tokens(summary + " " + functionality) & tokens(task.get("problem_statement", "")))
-    patch_overlap = len(tokens(summary + " " + functionality) & tokens(task.get("patch_excerpt", "")))
-    if (file_hit and test_hit) or (issue_overlap >= 4 and patch_overlap >= 3 and (file_hit or test_hit)):
+    issue_overlap = len(
+        tokens(summary + " " + functionality) & tokens(task.get("problem_statement", ""))
+    )
+    patch_overlap = len(
+        tokens(summary + " " + functionality) & tokens(task.get("patch_excerpt", ""))
+    )
+    if (file_hit and test_hit) or (
+        issue_overlap >= 4 and patch_overlap >= 3 and (file_hit or test_hit)
+    ):
         return 2
     if file_hit or test_hit or issue_overlap >= 4 or patch_overlap >= 3:
         return 1
@@ -146,29 +151,31 @@ def score_outputs(outputs_jsonl: Path, tasks_path: Path, out_path: Path) -> None
         summary = parsed.get("requirement_impact_summary", "") if isinstance(parsed, dict) else ""
         gold_files = task.get("gold_affected_files", [])
         gold_tests = task.get("gold_test_files", [])
-        rows.append({
-            "task_id": record.get("task_id", ""),
-            "source": record.get("source", ""),
-            "repo": record.get("repo", ""),
-            "language": record.get("language", ""),
-            "model": record.get("model", ""),
-            "condition": record.get("condition", ""),
-            "returncode": record.get("returncode", ""),
-            "elapsed_sec": record.get("elapsed_sec", ""),
-            "parse_ok": int(parsed is not None),
-            "affected_file_recall_3": recall_at(impacted, gold_files, 3),
-            "affected_file_recall_5": recall_at(impacted, gold_files, 5),
-            "affected_file_precision_5": precision_at(impacted, gold_files, 5),
-            "test_file_recall_3": recall_at(tests, gold_tests, 3),
-            "test_file_recall_5": recall_at(tests, gold_tests, 5),
-            "test_file_precision_5": precision_at(tests, gold_tests, 5),
-            "predicted_files": len(impacted),
-            "predicted_tests": len(tests),
-            "risk_note_count": len(risks),
-            "summary_words": len(re.findall(r"[A-Za-z0-9_]+", str(summary))),
-            "gold_files": len(gold_files),
-            "gold_tests": len(gold_tests),
-        })
+        rows.append(
+            {
+                "task_id": record.get("task_id", ""),
+                "source": record.get("source", ""),
+                "repo": record.get("repo", ""),
+                "language": record.get("language", ""),
+                "model": record.get("model", ""),
+                "condition": record.get("condition", ""),
+                "returncode": record.get("returncode", ""),
+                "elapsed_sec": record.get("elapsed_sec", ""),
+                "parse_ok": int(parsed is not None),
+                "affected_file_recall_3": recall_at(impacted, gold_files, 3),
+                "affected_file_recall_5": recall_at(impacted, gold_files, 5),
+                "affected_file_precision_5": precision_at(impacted, gold_files, 5),
+                "test_file_recall_3": recall_at(tests, gold_tests, 3),
+                "test_file_recall_5": recall_at(tests, gold_tests, 5),
+                "test_file_precision_5": precision_at(tests, gold_tests, 5),
+                "predicted_files": len(impacted),
+                "predicted_tests": len(tests),
+                "risk_note_count": len(risks),
+                "summary_words": len(re.findall(r"[A-Za-z0-9_]+", str(summary))),
+                "gold_files": len(gold_files),
+                "gold_tests": len(gold_tests),
+            }
+        )
     fields = list(rows[0].keys()) if rows else []
     write_csv(out_path, rows, fields)
     print(f"wrote {len(rows)} metric rows to {out_path}")
@@ -180,16 +187,18 @@ def score_rubric(outputs_jsonl: Path, tasks_path: Path, out_path: Path) -> None:
     for record in read_jsonl(outputs_jsonl):
         task = tasks.get(record["task_id"], {})
         parsed = extract_json(record.get("stdout", ""))
-        rows.append({
-            "task_id": record.get("task_id", ""),
-            "source": record.get("source", ""),
-            "repo": record.get("repo", ""),
-            "language": record.get("language", ""),
-            "model": record.get("model", ""),
-            "condition": record.get("condition", ""),
-            "requirement_impact_correctness": requirement_score(parsed, task),
-            "risk_note_usefulness": risk_score(parsed, task),
-        })
+        rows.append(
+            {
+                "task_id": record.get("task_id", ""),
+                "source": record.get("source", ""),
+                "repo": record.get("repo", ""),
+                "language": record.get("language", ""),
+                "model": record.get("model", ""),
+                "condition": record.get("condition", ""),
+                "requirement_impact_correctness": requirement_score(parsed, task),
+                "risk_note_usefulness": risk_score(parsed, task),
+            }
+        )
     fields = list(rows[0].keys()) if rows else []
     write_csv(out_path, rows, fields)
     print(f"wrote {len(rows)} rubric rows to {out_path}")
