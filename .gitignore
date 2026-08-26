@@ -31,3 +31,6 @@ manuscript/
 *.bbl
 *.blg
 *.out
+
+# Published outputs used to verify the reported tables and figures.
+!released_results/model_outputs/*_outputs.jsonl

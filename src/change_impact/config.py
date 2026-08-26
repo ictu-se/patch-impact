@@ -7,7 +7,6 @@ CONDITIONS = [
     "issue_only",
     "patch_only",
     "issue_plus_patch",
-    "issue_plus_patch_plus_tree",
 ]
 
 MODELS = [

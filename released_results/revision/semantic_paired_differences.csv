@@ -1,0 +1,6 @@
+comparison,metric,mean,ci_low,ci_high
+issue_plus_patch - patch_only,functionality_correctness,-0.2,-0.3625,-0.0625
+issue_plus_patch - patch_only,requirement_summary_correctness,0.0375,-0.0625,0.125
+issue_plus_patch - patch_only,risk_usefulness,0.0625,-0.075,0.2125
+issue_plus_patch - patch_only,unsupported_claim_severity,0.0375,-0.0625,0.15
+issue_plus_patch - patch_only,overall_triage_utility,0.075,-0.025,0.1875

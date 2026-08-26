@@ -1,0 +1,4 @@
+condition,generations,prompt_tokens_mean,prompt_tokens_min,prompt_tokens_max,output_tokens_mean,output_tokens_max,failed_calls
+issue_only,1000,907.4,375,9536,177.87,700,0
+patch_only,1000,1558.655,589,4612,194.352,548,0
+issue_plus_patch,1000,2106.089,666,10025,197.975,700,0

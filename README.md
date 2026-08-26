@@ -1,19 +1,18 @@
 # patch-impact
 
-Reproducibility artifact for **Patch-Grounded Software Change Impact Analysis and Regression Test Triage with Large Language Models**.
+Reproducibility artifact for **Patch-Grounded Software Change Reports with Local Large Language Models: What Remains Beyond Diff Parsing?**
 
-This repository contains only the code, prompt template, and task manifest needed to rerun the experiment. It intentionally excludes generated model outputs, metrics, figures, and manuscript files.
+This repository contains the refactored experiment code, prompt template, fixed task manifest, released model outputs, and analysis results needed to verify the reported tables and regenerate the figures. Manuscript sources and submission files are intentionally excluded.
 
 ## What This Reproduces
 
-The full experiment evaluates 10 Ollama-served models on 100 repository tasks under four evidence conditions:
+The reported experiment evaluates 10 Ollama-served models on 100 repository tasks under three evidence conditions:
 
 - `issue_only`
 - `patch_only`
 - `issue_plus_patch`
-- `issue_plus_patch_plus_tree`
 
-The pipeline rebuilds the task JSONL from external benchmark CSVs, runs the model matrix, scores file/test alignment, computes automatic rubric proxies, and writes aggregate CSVs and figures.
+The pipeline rebuilds the task JSONL from external benchmark CSVs, runs the model matrix, computes changed-path metrics and deterministic parser baselines, estimates repository-cluster bootstrap intervals and paired effects, performs a blinded two-judge semantic audit, and regenerates the four empirical figures.
 
 ## Requirements
 
@@ -51,6 +50,13 @@ ollama pull llama3.2-vision:11b
 ollama pull qwen2.5vl:3b
 ```
 
+The semantic audit additionally uses:
+
+```bash
+ollama pull deepseek-coder:6.7b
+ollama pull mistral:7b
+```
+
 ## Prepare the 100 Tasks
 
 Use the included `data/task_manifest.csv` to select the exact 100 task IDs used in the paper:
@@ -70,7 +76,7 @@ The generated `data/change_impact_tasks.jsonl` contains patch excerpts and gold 
 ```bash
 change-impact matrix \
   --models qwen2.5-coder:1.5b \
-  --conditions issue_only issue_plus_patch \
+  --conditions patch_only issue_plus_patch \
   --limit 2 \
   --workers 1
 ```
@@ -78,7 +84,10 @@ change-impact matrix \
 Then summarize:
 
 ```bash
-change-impact summarize
+change-impact revision \
+  --tasks data/change_impact_tasks.jsonl \
+  --results results \
+  --out revision_results
 ```
 
 ## Run the Full Matrix
@@ -87,12 +96,20 @@ Start Ollama, then run:
 
 ```bash
 change-impact matrix --workers 3 --timeout 240
-change-impact summarize
+change-impact revision --results results --out revision_results
+change-impact semantic-audit \
+  --results results \
+  --out revision_results \
+  --workers 4
+change-impact revision-figures \
+  --results revision_results \
+  --output figures
 ```
 
 Outputs are written to:
 
-- `results/` for raw model outputs, per-run metrics, rubric CSVs, and aggregate CSVs
+- `results/` for raw model outputs and per-run measurements
+- `revision_results/` for parser baselines, clustered intervals, paired effects, and semantic-audit tables
 - `figures/` for PDF figures
 
 Both directories are ignored by Git.
@@ -106,8 +123,46 @@ change-impact matrix     # run and score many model/condition pairs
 change-impact score      # score file/test alignment for one output file
 change-impact rubric     # score automatic requirement/risk proxies
 change-impact summarize  # aggregate metrics and generate figures
+change-impact revision   # parser baseline, ceilings, clustered CIs, paired effects
+change-impact semantic-audit    # blinded two-judge semantic evaluation
+change-impact revision-figures  # regenerate the four reported empirical figures
+```
+
+## Verify the Released Results
+
+The committed `released_results/` directory contains all 3,000 reports used by
+the revised three-condition analysis and the derived tables. After preparing
+`data/change_impact_tasks.jsonl`, recompute the deterministic and LLM path
+analyses into a temporary directory:
+
+```bash
+change-impact revision \
+  --tasks data/change_impact_tasks.jsonl \
+  --results released_results/model_outputs \
+  --out reproduced_revision
+```
+
+To recompute the published semantic tables from the committed raw judgments
+without issuing new model calls, first copy the raw judgment file and resume:
+
+```bash
+mkdir -p reproduced_semantic
+cp released_results/revision/semantic_judgments.jsonl reproduced_semantic/
+change-impact semantic-audit \
+  --tasks data/change_impact_tasks.jsonl \
+  --results released_results/model_outputs \
+  --out reproduced_semantic \
+  --resume
+```
+
+Regenerate the figures directly from the released tables:
+
+```bash
+change-impact revision-figures \
+  --results released_results/revision \
+  --output reproduced_figures
 ```
 
 ## Reproducibility Notes
 
-The task sample is fixed by `data/task_manifest.csv`. The generation settings are fixed in code: temperature `0.1`, top-p `0.9`, and `700` output tokens. Exact wall-clock runtime may vary with hardware, Ollama version, quantization, and concurrent workers.
+The task sample is fixed by `data/task_manifest.csv`. Generation uses temperature `0.1`, top-p `0.9`, and 700 output tokens. Semantic judging uses temperature `0`, top-p `0.9`, and 240 output tokens with explicit calibration anchors. The audit selects one task from each of four languages per generator, evaluates all three conditions, and uses two judges for 240 judgments. Exact wall-clock runtime may vary with hardware, Ollama version, quantization, and concurrent workers.
